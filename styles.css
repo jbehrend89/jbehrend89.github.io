@@ -10,10 +10,13 @@ body {
     background-repeat: no-repeat;
     background-position: left top;
     width: 100%;
-    margin: 0;
     background-color: #D6B4FC;
 }
 
+div {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
 h1 {
     font-size: 2.5rem;
     margin-top: 10px;
@@ -39,6 +42,7 @@ header a {
     text-decoration: none;
     margin: 10px;
     padding: 5px;
+    width: 100%;
     display: inline-block;
     color: #fff;
 }
@@ -197,7 +201,7 @@ footer {
     font-weight: bold;
 }
 
-/*Form Styles*/
+/*Contact Me Styles*/
 button {
     padding: 10px;
     width: 110px;
@@ -259,13 +263,30 @@ form {
     width: 100px;
 }
 
+/*Contact me - Image Style*/
 #letter img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
     border: 5px solid #555;
-    width: 600px;
-    height: 200px;
+    width: 60%;
+    max-height: 200px;
+    height: auto;
     object-fit: cover;
 }
+
+/*Contact me - Responsive design for image*/
+    /* For devices less than 600px: */
+    @media only screen and (max-width: 600px) {
+        #leter img  {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            border: 5px solid #555;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+      }
