@@ -65,13 +65,10 @@ nav {
     a:hover {
         font-weight: 900;
     }
-}
 
 footer {
-    position:absolute;
-    bottom:0;
     width:100%;
-    height:40px;
+    height:auto;
     background: #5D21D0;
     color: #fff;
     text-align: center;
@@ -198,10 +195,6 @@ footer {
 
 .selected {
     font-weight: bold;
-}
-
-#p-index{
-
 }
 
 /*Form Styles*/
