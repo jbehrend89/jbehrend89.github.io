@@ -5,11 +5,18 @@ html {
 }
 
 body {
+    background-image: url("images/purple.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
     width: 100%;
-    margin: 0;
     background-color: #D6B4FC;
 }
 
+div {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
 h1 {
     font-size: 2.5rem;
     margin-top: 10px;
@@ -21,6 +28,13 @@ h2{
     font-size: 2rem;
     text-align: left;
     color: #fff;
+}
+
+h3{
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
 }
 
 header a {
@@ -38,17 +52,30 @@ header {
 }
 
 nav {
-    float: none;
-    text-align: center;
     background-color: #5D21D0;
     color: #fff;
-}
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    font: 120% system-ui;
+    text-align: center;
+    padding: 0px 0px;
+      }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:hover {
+        font-weight: 900;
+    }
 
 footer {
-    background-color: #5D21D0;
+    width:100%;
+    height:auto;
+    background: #5D21D0;
     color: #fff;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 0px;
 }
 
 .quotes{
@@ -59,10 +86,6 @@ footer {
 }
 
 /*Homepage Styles*/
-.homepage {
-    height: 95vh;
-}
-
 .center {
     display: block;
     margin-top: 30px;
@@ -177,18 +200,7 @@ footer {
     font-weight: bold;
 }
 
-.main {
-    padding: 50px;
-}
-
-#p-index{
-    font-size: 1.5rem;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-}
-
-/*Form Styles*/
+/*Contact Me Styles*/
 button {
     padding: 10px;
     width: 110px;
@@ -250,13 +262,30 @@ form {
     width: 100px;
 }
 
+/*Contact me - Image Style*/
 #letter img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
     border: 5px solid #555;
-    width: 600px;
-    height: 200px;
+    width: 60%;
+    max-height: 200px;
+    height: auto;
     object-fit: cover;
 }
+
+/*Contact me - Responsive design for image*/
+    /* For devices less than 600px: */
+    @media only screen and (max-width: 600px) {
+        #leter img  {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            border: 5px solid #555;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+      }
